@@ -1,0 +1,232 @@
+/* === core form styling  === */
+.auth-bg-img {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.auth-bg-img img {
+    width: 1600px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.text-content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: justify;
+}
+
+.text-content h2 {
+  font-size: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.5);
+}
+form label { font-weight: 600; }
+form input,
+form select,
+form textarea,
+form button {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+form button {
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.form-password a {
+  text-decoration: none;
+
+}
+
+form button:hover { background: #333; }
+
+/* divider line between classic login and SSO */
+.form-box .divider {
+  position: relative;
+  text-align: center;
+  color: #666;
+  font-size: .85rem;
+  margin: 5px 0 5px;
+}
+.form-box.divider::before,
+.form-box .divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 2px;
+  background: #ddd;
+}
+.form-box .divider::before { left: 0; }
+.form-box .divider::after  { right: 0; }
+
+/* layout for the buttons */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* base button */
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    color: black;
+}
+.btn-facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Google look – light background, subtle border */
+.btn-google {
+  background: #fff;
+  border: 1px solid #dadce0;
+}
+.btn-google:hover {
+  box-shadow: 0 1px 3px rgba(60,64,67,.3);
+}
+
+/* Facebook look – blue background */
+.btn-facebook {
+  background: #1877f2;
+  color: #fff;
+}
+.btn-facebook:hover {
+  background: #166fe5;
+}
+
+#profilePhoto {
+  margin-top: 8px;
+  padding: 6px;
+}
+
+#photoPreview {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border: 2px solid #ccc;
+}
+
+
+.otp-field {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.otp-field input {
+  flex: 1;
+}
+
+.otp-field button,
+.otp-box button {
+  padding: 8px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.otp-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.info-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.info-icon {
+  display: inline-block;
+  font-weight: bold;
+  border: 1px solid #999;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 14px;
+  background-color: #eee;
+  color: #333;
+  line-height: 1;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 260px;
+  background-color: #444;
+  color: #fff;
+  text-align: left;
+  padding: 8px;
+  border-radius: 6px;
+  position: absolute;
+  top: -5px;
+  left: 10%;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.info-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* === side-by-side layout === */
+.auth-container {
+  max-width: 1100px;        /* center in page */
+  margin: 60px auto;
+  display: flex;
+  gap: 48px;
+  justify-content: center;
+  flex-wrap: wrap;          /* lets them stack if too narrow */
+}
+.form-box {
+  flex: 1 1 380px;          /* grow/shrink but keep a min width */
+}
+.form-box h2 {
+  margin-bottom: 10px;
+}
+/* === responsive fallback: stack vertically below 768 px === */
+@media (max-width: 768px) {
+  .auth-container { flex-direction: column; }
+}

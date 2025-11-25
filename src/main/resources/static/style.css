@@ -1,0 +1,449 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+/* Navigation Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+
+/* Left side: Logo + Nav */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.logo-icon-header {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 4px 8px;
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+.logo-text-header {
+  color: black;
+  font-size: 14px;
+}
+
+/* Main Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  position: relative;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 12px;
+  display: block;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px 15px;
+  display: none;
+  flex-direction: row;
+  gap: 40px;
+  min-width: 300px;
+  z-index: 1000;
+}
+
+/* Each Column in the Dropdown */
+.dropdown-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-column strong {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.dropdown-column ul {
+  list-style: none;
+}
+
+.dropdown-column ul li {
+  padding: 6px 0;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+}
+
+.dropdown-column ul li:hover {
+  color: #007bff;
+}
+
+/* Show Dropdown on Hover */
+.nav-items:hover .dropdown-menu,
+.nav-links li:hover .dropdown-menu {
+  display: flex;
+}
+
+/* Right-side Nav (Buttons & Links) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.link:hover {
+  color: #007bff;
+}
+
+.divider {
+  color: #ccc;
+}
+
+.get-started {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.get-started a {
+  text-decoration: none;
+  color: white;
+}
+
+.get-started:hover {
+  background-color: #333;
+}
+
+
+/* background video section css */
+.video-container {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: justify;
+  font-size: 20px;
+}
+
+/* Featured Quality and Items css */
+.company-crstc h1 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Layout for the innovation blocks */
+.advancements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 10px;
+}
+
+/* Each image+label container */
+.innovation-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250px;
+  text-align: center;
+}
+
+/* Text below each image */
+.innovation-item strong {
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+/* Image styling */
+.innovation-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+/* conventional and non-conventional section css*/
+.category-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 40px;
+  background-color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+}
+
+.category-block h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.category-block p {
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+/* images inside the conventional and non-conventional part */
+.image-slider {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 20px;
+  padding-left: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.slider-track {
+  display: flex;
+  gap: 30px;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 auto;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide .tag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+
+
+/* what we offer section css*/
+.company-overview {
+  padding: 30px 40px;
+  background-color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+}
+
+.overview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.overview-section h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.overview-section p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.overview-icon {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.overview-icon h3 {
+  font-size: 12px;
+}
+
+.overview-icon img {
+  flex: 1 1 10%;
+  max-width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+/* Partner Company and Location Map css*/
+#main-1f {
+  padding: 30px 40px;
+  background-color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  color: #111;
+}
+
+#main-1f h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  max-width: 600vh;
+}
+
+.customer-company-logos {
+  display: flex;
+  align-item: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.customer-company-logos img {
+  width: 20px;
+  height: auto;
+}
+
+.customer-company-names {
+  display: flex;
+  font-size: 12px;
+  text-align: center;
+  align-item: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.customer-company-names p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+
+/* map container css*/
+.company-location {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.map-container {
+   flex: 1;
+   min-width: 400px;
+   height: 300px;
+   border-radius: 20px;
+   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.map-container {
+  flex: 1;
+  max-width: 500px;
+  align-item: left;
+}
+
+.map-container h4 {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* company background*/
+.company-history {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.company-history h4 {
+  text-align: left;
+  font-size: 14px;
+}
+
+.company-history p {
+  font-size: 12px;
+}

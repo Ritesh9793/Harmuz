@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="entity-register-login.css">
+    <link rel="icon" href="Icons-Images-Videos/favicon-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>Harmuz | Register - Login</title>
+</head>
+<body>
+
+  <div id="login" class="logs">
+    <!-- This is navigation bar section -->
+    <section id="main-1a" class="navigation-section">
+      <nav class="navbar">
+        <div class="nav-left">
+          <div class="logo">
+            <span class="logo-icon-header">H</span><span class="logo-text-header">armuz</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+
+            <!-- products part  of the navigation bar -->
+            <li class="nav-items">
+              <a href="#">Products ▾</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-column">
+                  <strong>Aerospace</strong>
+                  <ul>
+                    <li>Fighter Jets</li>
+                    <li>UAVs</li>
+                    <li>Transport Aircraft</li>
+                    <li>Helicopters</li>
+                    <li>Radar Systems</li>
+                    <li>Electronic Warfare</li>
+                    <li>Flight Control Systems</li>
+                    <li>Navigation Systems</li>
+                    <li>Missiles & Bombs</li>
+                    <li>Aerostat Platforms</li>
+                  </ul>
+                </div>
+                <div class="dropdown-column">
+                  <strong>Naval Systems</strong>
+                  <ul>
+                    <li>Warships & Submarines</li>
+                    <li>Patrol Boats</li>
+                    <li>Sonar Systems</li>
+                    <li>Naval Guns</li>
+                    <li>Torpedoes</li>
+                    <li>Naval Missiles</li>
+                  </ul>
+                  <strong>Personal Protection</strong>
+                  <ul>
+                    <li>Bulletproof Vests</li>
+                    <li>Helmets & Shields</li>
+                    <li>CBRN Suits</li>
+                    <li>Combat Boots</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- solutions part  of the navigation bar -->
+            <li><a href="#">Solutions ▾</a>
+              <div class="dropdown-menu">
+                <div class="dropdown-column">
+                  <strong>Land Systems</strong>
+                  <ul>
+                    <li>Tanks</li>
+                    <li>APCs & IFVs</li>
+                    <li>Artillery (ATAGS)</li>
+                    <li>Rocket Launchers</li>
+                    <li>Mortars</li>
+                    <li>Ground Radar Systems</li>
+                    <li>Engineering Vehicles</li>
+                  </ul>
+                </div>
+                <div class="dropdown-column">
+                  <strong>Missile Systems</strong>
+                  <ul>
+                    <li>Surface-to-Air</li>
+                    <li>Surface-to-Surface</li>
+                    <li>Anti-Tank Missiles</li>
+                    <li>Hypersonic Missiles</li>
+                  </ul>
+                  <strong>Support Systems</strong>
+                  <ul>
+                    <li>Training Simulators</li>
+                    <li>Electronic Warfare</li>
+                    <li>Encrypted Radios</li>
+                    <li>Engineering Tools</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <!-- resources part  of the navigation bar -->
+            <li><a href="#">Resources ▾</a></li>
+            <!-- pricing part  of the navigation bar -->
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <a href="vendor-register-login.html" class="link">For Vendors</a>
+          <span class="divider">|</span>
+          <a href="entity-register-login.html" class="link">Log In</a>
+          <button class="get-started"> <a href="entity-register-login.html" >Get Started</a> </button>
+        </div>
+      </nav>
+    </section>
+
+    <div id="log-bg" class="auth-bg-img">
+      <img src="Icons-Images-Videos\auth-bg.jpg" alt="Authentication Background Image"/>
+
+      <div id="overlaid-text" class="text-content">
+        <h2>Register Yourself.</h2>
+        <p>or LogIn - If already registered</p>
+      </div>
+
+    </div>
+
+    <!-- This is login and registration form section-->
+    <!-- AUTH FORMS WRAPPER -->
+    <section id="auth-forms" class="auth-container">
+
+      <!-- LOGIN -->
+      <div class="form-box">
+        <h2>Log In</h2>
+
+        <!-- classic e-mail / password form -->
+        <form action="/login" method="POST">
+          <!--  Google OAuth -->
+          <button type="button" class="btn-google"
+                  onclick="window.location='/auth/google'">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg"
+                 alt="" width="18" height="18" />
+            Continue with Google
+          </button>
+
+          <!-- Facebook OAuth -->
+          <button type="button" class="btn-facebook"
+                  onclick="window.location='/auth/facebook'">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg"
+                 alt="" width="18" height="18" />
+            Continue with Facebook
+          </button>
+          <p class="divider"><span>or log in with</span></p>
+          <label>Email</label>
+          <input type="email" name="email" required />
+
+          <label>Password</label>
+          <input type="password" name="password" required />
+
+          <!-- Forgot-password link -->
+          <div class="form-extra">
+            <a href="/forgot-password">Forgot Password?</a>
+          </div>
+
+          <button type="submit">Log In</button>
+
+        </form>
+      </div>
+
+
+      <!-- REGISTRATION -->
+      <div class="form-box">
+        <h2>Get Started – Register Your Organization</h2>
+        <form action="/register" method="POST" enctype="multipart/form-data">
+
+          <label for="profilePhoto">Upload Org. Logo (Only .jpg, .png, .jpeg format)</label>
+          <input type="file" id="profilePhoto" name="profilePhoto" accept="image/.jpeg,.png,.jpg" onchange="previewPhoto(event)">
+          <br>
+          <img id="photoPreview" src="#" alt="Preview" style="display:none; width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-top: 10px;">
+
+          <label for="country">Select a country:</label>
+          <select id="country">
+            <option value="">--Select--</option>
+          </select>
+
+          <label>Organization (Entity) Name</label>
+          <input type="text" name="entity_name" required />
+
+          <label>Phone Number</label>
+          <div class="otp-field">
+            <input type="tel" name="phone"
+                   pattern="[0-9+\- ]{7,15}"
+                   placeholder="eg: (country-code)-(7-15 digit)"
+                   required />
+            <button type="button" onclick="sendOTP('phone')">Get OTP</button>
+          </div>
+          <div id="phone-otp-box" class="otp-box" style="display:none;">
+            <input type="text" id="phone-otp" placeholder="Enter OTP" />
+            <button type="button" onclick="verifyOTP('phone')">Verify</button>
+          </div>
+
+          <label>Email</label>
+          <div class="otp-field">
+            <input type="email" name="email" id="email" required />
+            <button type="button" onclick="sendOTP('email')">Get OTP</button>
+          </div>
+          <div id="email-otp-box" class="otp-box" style="display:none;">
+            <input type="text" id="email-otp" placeholder="Enter OTP" />
+            <button type="button" onclick="verifyOTP('email')">Verify</button>
+          </div>
+
+          <label>Business License (Only .pdf format)</label>
+          <input type="file" name="approval_letter"
+                 accept=".pdf" required />
+
+          <label>Govt. Issued (Approval) Document (Only .pdf format)</label>
+          <input type="file" name="approval_letter"
+                 accept=".pdf" required />
+
+          <label>Address</label>
+          <textarea name="address" rows="3" required></textarea>
+
+          <label for="password">Password</label>
+          <input type="password"
+                 id="password"
+                 name="password"
+                 required
+                 minlength="8"
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}"
+                 title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character." />
+          <span class="info-container">
+  <span class="info-icon">?</span>
+  <span class="tooltip-text">
+    Password must be at least 8 characters long and contain:<br>
+    • One uppercase letter<br>
+    • One lowercase letter<br>
+    • One number<br>
+    • One special character
+  </span>
+</span>
+
+
+          <label>Re-enter Password</label>
+          <input type="password"
+                 id="confirm-password"
+                 name="confirm-password"
+                 required
+                 minlength="8"
+                 pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}"
+                 title="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character." />
+          <span class="info-container">
+  <span class="info-icon">?</span>
+  <span class="tooltip-text">
+    Confirm Password should be same as previous one.
+  </span>
+</span>
+
+
+          <button type="submit">Register</button>
+
+        </form>
+      </div>
+
+    </section>
+
+    <!-- This is footer section -->
+    <section id="main-1g" class="footer">
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="footer-column">
+            <h4>For Businesses</h4>
+            <ul>
+              <li><a href="#">Capability Assessments</a></li>
+              <li><a href="#">FaceCode</a></li>
+              <li><a href="#">Hackathons</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Solutions</h4>
+            <ul>
+              <li><a href="#">For Tech Recruiters</a></li>
+              <li><a href="#">For Hiring Managers</a></li>
+              <li><a href="#">Remote Hiring</a></li>
+              <li><a href="#">Learning & Development</a></li>
+              <li><a href="#">University Hiring</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Features</h4>
+            <ul>
+              <li><a href="#">Accurate Assessments</a></li>
+              <li><a href="#">Advanced Proctoring</a></li>
+              <li><a href="#">Improved Candidate Experience</a></li>
+              <li><a href="#">Detailed Analytics</a></li>
+              <li><a href="#">Enterprise-Ready Platform</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Enterprise Readiness</h4>
+            <ul>
+              <li><a href="#">Security and Compliance</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">Enterprise Support</a></li>
+              <li><a href="#">Ease of Use</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Knowledge</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">E-Books</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Insights</a></li>
+              <li><a href="#">Glossary</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">Life@Harmuz</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-middle">
+          <div class="footer-logo-section">
+            <div class="logo">
+              <span class="logo-icon">H</span><span class="logo-text">armuz</span>
+            </div>
+            <p>
+              Harmuz is a global defence trade platform enabling the buying and selling of
+              advanced military equipment and armaments.
+            </p>
+            <div class="certs">
+              <img src="badge1.png" alt="badge" />
+              <img src="badge2.png" alt="badge" />
+              <img src="badge3.png" alt="badge" />
+              <img src="badge4.png" alt="badge" />
+              <img src="badge5.png" alt="badge" />
+              <img src="badge6.png" alt="badge" />
+            </div>
+          </div>
+          <div class="footer-contact">
+            <div class="footer-column"><strong>Address</strong><br />Banaras Locomotive Works<br />221004, Varanasi, Uttar Pradesh<br />India</div>
+            <div class="footer-column"><strong>Phone</strong><br />+91 9793xxxx01</div>
+            <div class="footer-column"><strong>Sales Enquiry</strong><br />contact@harmuz.com</div>
+            <div class="footer-column"><strong>Support</strong><br />support@harmuz.com</div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <p>© Copyright 2025. All rights reserved by Harmuz</p>
+          <div class="social-icons">
+            <a href="#"><img src="Icons-Images-Videos/fb-icon.png" alt="Facebook" /></a>
+            <a href="#"><img src="Icons-Images-Videos/linkedin-icon.png" alt="LinkedIn" /></a>
+            <a href="#"><img src="Icons-Images-Videos/youtube-icon.png" alt="YouTube" /></a>
+            <a href="#"><img src="Icons-Images-Videos/x-icon.png" alt="X (Twitter)" /></a>
+            <a href="#"><img src="Icons-Images-Videos/instagram-icon.png" alt="Instagram" /></a>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!-- This is Developers section -->
+    <section id="main-1h">
+      <div id="made-by" class="heart-icon">
+        <h4>Made with Love
+          <img src="Icons-Images-Videos/heart-icon.png" alt="Heart"/>
+          By Ritesh Gupta ( Sr. Developer @Harmuz ) </h4>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Array of country names
+    const countries = [
+  "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina",
+  "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados",
+  "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana",
+  "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon",
+  "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros",
+  "Congo (Congo-Brazzaville)", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic",
+  "Democratic Republic of the Congo", "Denmark", "Djibouti", "Dominica", "Dominican Republic",
+  "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini",
+  "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana",
+  "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras",
+  "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy",
+  "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kuwait", "Kyrgyzstan",
+  "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania",
+  "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands",
+  "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro",
+  "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand",
+  "Nicaragua", "Niger", "Nigeria", "North Korea", "North Macedonia", "Norway", "Oman", "Pakistan",
+  "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal",
+  "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia",
+  "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia",
+  "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia",
+  "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka",
+  "Sudan", "Suriname", "Sweden", "Switzerland", "Syria", "Tajikistan", "Tanzania", "Thailand",
+  "Timor-Leste", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan",
+  "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States",
+  "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia",
+  "Zimbabwe"
+];
+
+
+    const dropdown = document.getElementById("country");
+
+    // Populate the dropdown
+    countries.forEach(country => {
+      const option = document.createElement("option");
+      option.value = country;
+      option.textContent = country;
+      dropdown.appendChild(option);
+    });
+
+    // Track verified states
+let verified = { phone: false, email: false };
+
+function sendOTP(type) {
+  const value = document.getElementById(type).value;
+
+  if (!value) {
+    alert(`Please enter a valid ${type}`);
+    return;
+  }
+
+  fetch(`/send-otp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ type, value })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert(`OTP sent to ${type}`);
+      document.getElementById(`${type}-otp-box`).style.display = "flex";
+    } else {
+      alert(`Failed to send OTP: ${data.message}`);
+    }
+  });
+}
+
+function verifyOTP(type) {
+  const value = document.getElementById(type).value;
+  const otp = document.getElementById(`${type}-otp`).value;
+
+  fetch(`/verify-otp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ type, value, otp })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert(`${type.toUpperCase()} verified!`);
+      verified[type] = true;
+      document.getElementById(`${type}-otp-box`).style.display = "none";
+    } else {
+      alert(`Invalid OTP`);
+    }
+  });
+}
+
+  function previewPhoto(event) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      const preview = document.getElementById('photoPreview');
+      preview.src = reader.result;
+      preview.style.display = 'block';
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  }
+
+
+  </script>
+</body>
+</html>
