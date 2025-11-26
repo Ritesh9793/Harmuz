@@ -1,4 +1,4 @@
-# Harmuz
+<img width="1478" height="6218" alt="_C__Users_rites_OneDrive_Desktop_NodeApp_BLW-Project_Harmuz_src_main_resources_static_index html (1)" src="https://github.com/user-attachments/assets/f4d1643c-53a6-4215-a383-479084d59ec0" /># Harmuz
 
 Harmuz is a **B2B-focused web application** built to streamline information sharing, improve communication, and provide secure access control between business entities.  
 Developed with a modern backend stack, the platform ensures reliability, scalability, and secure data handling.
@@ -51,6 +51,9 @@ Harmuz/
 
 
 ---
+
+## Screenshot
+![App Screenshot](screenshot.png)
 
 ## 🛠️ Setup & Installation
 
